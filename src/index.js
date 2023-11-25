@@ -1,13 +1,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
+import Roots from './roots/roots.jsx';
+import Home from './pages/home/home.jsx';
+import Cocktails from './pages/cocktails/cocktails.jsx';
+import Cocktail from './pages/cocktail/cocktail.jsx';
+import Ingredients from './pages/ingredients/ingredients';
+import Noalcohol from './pages/alcoholfree/alcoholfree.jsx';
+
+//Roots
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+
+
+
+const router = createBrowserRouter([
+  {
+    element: <Roots />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/cocktails", element: <Cocktails/> },
+      { path: "/ingredients", element: <Ingredients/>},
+      { path:"/alcoholfree", element: <Noalcohol/>},
+      { path: "/cocktails/:cocktailName", element: <Cocktail/> },
+      { path: "/ingredients/:cocktailName", element: <Cocktail/> },
+      // { path: "about", element: <About /> },
+
+      
+      // {
+      //   path: "cocktail/:id",
+      //   element: <cocktail />,
+      // },
+
+    ],
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

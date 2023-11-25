@@ -1,0 +1,50 @@
+.cocktails-hero {
+    /* background-image: url('https://cdn.pixabay.com/photo/2020/01/30/21/24/shop-4806610_640.jpg'); */
+    /* background-image: url('https://cdn.pixabay.com/photo/2023/10/28/06/40/wine-8346641_640.jpg'); */
+    background-image: url('/public/wine.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 0 40px 40px;
+    height: 500px;
+    width: 100%;
+    margin-top: -30px;
+
+}
+
+.cocktails-hero h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+
+.result {
+    /* color: #e41616; */
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+
+.cocktails-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.cocktails-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .cocktails-hero {
+    }
+}

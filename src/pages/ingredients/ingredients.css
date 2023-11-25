@@ -1,0 +1,48 @@
+.ingredients-hero{
+    background-image: url('/public/cocktail.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 0 40px 40px;
+    height: 500px;
+    width: 100%;
+    margin-top: -30px;
+
+}
+
+
+.ingredients-hero h1 {
+    color: #ffffff;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 200px;
+}
+
+
+/* .result {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+
+} */
+
+
+.ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.ingredients-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media screen and (max-width: 500px) {
+    .cocktails-hero {
+    }
+}
