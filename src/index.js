@@ -2,44 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 
-import Roots from './roots/roots.jsx';
-import Home from './pages/home/home.jsx';
-import Cocktails from './pages/cocktails/cocktails.jsx';
-import Cocktail from './pages/cocktail/cocktail.jsx';
-import Ingredients from './pages/ingredients/ingredients';
-import Noalcohol from './pages/alcoholfree/alcoholfree.jsx';
+import Home from './pages/home';
+import Cocktails from './pages/cocktails';
+import Ingredients from './pages/ingredients';
+import Random from './pages/random';
+import Apropos from './pages/apropos';
+import Layout from './components/layout';
+import Details from './pages/details'
 
 //Roots
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-
-
-
-
 const router = createBrowserRouter([
   {
-    element: <Roots />,
+    path: "/",
+    element: <Layout />, // Utilisation de Layout ici
     children: [
       { path: "/", element: <Home /> },
-      { path: "/cocktails", element: <Cocktails/> },
-      { path: "/ingredients", element: <Ingredients/>},
-      { path:"/alcoholfree", element: <Noalcohol/>},
-      { path: "/cocktails/:cocktailName", element: <Cocktail/> },
-      { path: "/ingredients/:cocktailName", element: <Cocktail/> },
-      // { path: "about", element: <About /> },
-
-      
-      // {
-      //   path: "cocktail/:id",
-      //   element: <cocktail />,
-      // },
+      { path: "/cocktails", element: <Cocktails /> },
+      { path: "/ingredients", element: <Ingredients /> },
+      { path: "/:id", element: <Details />},
+      { path: "/random-cocktail", element: <Random /> },
+      { path: "/apropos", element: <Apropos /> },
 
     ],
   },
 ]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -47,7 +38,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

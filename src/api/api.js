@@ -14,4 +14,5 @@ export {
     randomCocktailURL, 
     ingredientByNameURL,
     filterByNonAlcoholicURL,
-    filterByCategoryURL };
+    filterByCategoryURL 
+};

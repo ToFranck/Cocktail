@@ -1,10 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
 
 body {
   margin: 0;
   font-family: 'Figtree', sans-serif;
 
-  background-color: rgb(255, 240, 240);
+  /* background-color: rgb(255, 240, 240); */
 
   /* background: rgb(255,255,255);
   background: linear-gradient(124deg, rgba(255,255,255,1) 38%, rgba(255,0,0,1) 100%); */
@@ -13,4 +18,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slider {
+  animation: slide 120s linear infinite; /* 30 secondes pour un défilement plus lent */
+}
+
+
+@media only screen and (max-width: 900px) {
+  .left img {
+    width: 395px!important;
+    height: 395px!important;
+  }
 }
